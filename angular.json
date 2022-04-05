@@ -27,9 +27,37 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/animate.min.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/fontawesome-all.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/flaticon.css",
+              "src/assets/css/odometer.css",
+              "src/assets/css/aos.css",
+              "src/assets/css/slick.css",
+              "src/assets/css/default.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vendor/jquery-3.6.0.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/isotope.pkgd.min.js",
+              "src/assets/js/imagesloaded.pkgd.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.odometer.min.js",
+              "src/assets/js/jquery.appear.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/ajax-form.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/aos.js",
+              "src/assets/js/plugins.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
