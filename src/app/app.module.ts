@@ -13,6 +13,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './home/main/main.component';
+import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
+import { TvShowDetailsComponent } from './tv-shows/tv-show-details/tv-show-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MainComponent } from './home/main/main.component';
     SignupComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    MovieDetailsComponent,
+    TvShowDetailsComponent
   ],
   imports: [
     BrowserModule,
