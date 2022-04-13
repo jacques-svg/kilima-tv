@@ -12,7 +12,7 @@
                             </div>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
-                                    <li class="active menu-item-has-children"><a href="#">Home</a></li>
+                                    <li class="active menu-item-has-children"><a href="#" translate>home</a></li>
                                     <li class="menu-item-has-children"><a routerLink="/movies">Movies</a></li>
                                     <li><a routerLink="/tv-show">tv show</a></li>
                                     <li><a routerLink="/musics">Musics</a></li>
@@ -26,13 +26,16 @@
                                     <li class="header-lang">
                                         <form action="#">
                                             <div class="icon"><i class="flaticon-globe"></i></div>
-                                            <select id="lang-dropdown">
-                                                <option value="">En</option>
-                                                <option value="">Fr</option>
+                                            <select 
+                                            [(ngModel)]="language"
+                                            name="something"
+                                            (change)="onChange($event)">
+                                                <option value="en">En</option>
+                                                <option value="fr">Fr</option>
                                             </select>
                                         </form>
                                     </li>
-                                    <li class="header-btn"><a routerLink="/login" class="btn">Sign In</a></li>
+                                    <li class="header-btn"><a routerLink="/login" class="btn" translate>signin</a></li>
                                 </ul>
                             </div>
                         </nav>

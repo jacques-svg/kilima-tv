@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { BrowserModule } from '@angular/platform-browser';
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {MatSelectModule} from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +21,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './home/main/main.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { TvShowDetailsComponent } from './tv-shows/tv-show-details/tv-show-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KilimaTranslationDirective } from './helper/translation/kilima-translation.directive';
+import { KilimaTranslationPipe } from './helper/translation/kilima-translation.pipe';
 
 @NgModule({
   declarations: [
@@ -30,13 +39,31 @@ import { TvShowDetailsComponent } from './tv-shows/tv-show-details/tv-show-detai
     FooterComponent,
     MainComponent,
     MovieDetailsComponent,
-    TvShowDetailsComponent
+    TvShowDetailsComponent,
+    KilimaTranslationDirective,
+    KilimaTranslationPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatSelectModule,
+    // ngx-translate and the loader module
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
