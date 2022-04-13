@@ -1,5 +1,11 @@
 {
-    "signin": "Sign In",
-    "home":"Home"
+    "HEADER":{
+        "HOME":"Home",
+        "SIGNIN":"Sign In",
+        "MOVIES":"Movies",
+        "TV_SHOW":"Tv show",
+        "MUSICS":"Musics",
+        "SUBSCRIPTIONS":"Subscriptions"
 
+    }
 }

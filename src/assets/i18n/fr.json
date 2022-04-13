@@ -1,4 +1,10 @@
 {
-    "signin": "Se connecter",
-    "home":"Accueil"
+    "HEADER":{
+        "HOME":"Accueil",
+        "SIGNIN":"Se connecter",
+        "MOVIES":"Films",
+        "TV_SHOW":"Series",
+        "MUSICS":"Musiques",
+        "SUBSCRIPTIONS":"Abonnements"
+    }
 }
