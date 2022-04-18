@@ -7,5 +7,69 @@
         "MUSICS":"Musics",
         "SUBSCRIPTIONS":"Subscriptions"
 
+    },
+    "FOOTER":{
+        "TRIAL":"TRIAL START FIRST 30 DAYS",
+        "SUSCRIBE_EMAIL":"Enter your email to create or restart your membership",
+        "EMAIL":"Enter your email",
+        "STARTED":"get started",
+        "MENU":{
+            "HELP":"HELP CENTER",
+            "TERMS":"TERMS OF USE",
+            "PRIVACY":"PRIVACY",
+            "CONTACTS":"CONTACTS"
+        },
+        "COPYRIGHT":"2022. All rights Reserved By"
+    },
+    "MOVIES":{
+        "TITLE_1":"Our",
+        "TITLE_2":"Movies",
+        "HOME":"Home",
+        "MOVIE":"movie",
+        "LIST":{
+            "TITLE_1":"ONLINE STREAMING",
+            "TITLE_2":"New Release Movies"
+        }
+    },
+    "SHOWS":{
+        "TITLE_1":"Tv",
+        "TITLE_2":"Shows",
+        "HOME":"Home",
+        "MOVIE":"TV SHOW",
+        "LIST":{
+            "TITLE_1":"ONLINE STREAMING",
+            "TITLE_2":"New Release Tv Show"
+        }
+    },
+    "MUSICS":{
+        "TITLE_1":"Our",
+        "TITLE_2":"Musics",
+        "HOME":"Home",
+        "MOVIE":"movie",
+        "LIST":{
+            "TITLE_1":"ONLINE STREAMING",
+            "TITLE_2":"New Release Movies"
+        }
+    },
+    "PRICING":{
+        "TITLE_1":"Our",
+        "TITLE_2":"Movies",
+        "HOME":"Home",
+        "MOVIE":"movie",
+        "LIST":{
+            "TITLE_1":"ONLINE STREAMING",
+            "TITLE_2":"New Release Movies"
+        },
+        "PLANS":{
+            "REGULAR":{
+
+            },
+            "STANTARD":{
+
+            },
+            "PREMIUM":{
+
+            }
+        }
     }
 }
