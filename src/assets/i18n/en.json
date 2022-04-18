@@ -8,6 +8,14 @@
         "SUBSCRIPTIONS":"Subscriptions"
 
     },
+    "CATEGORIES":{
+        "ANIMATION":"Animation",
+        "ROMANTIC":"Romantic",
+        "ACTIONS":"Actions",
+        "MUSICS":{
+        }
+    },
+    
     "FOOTER":{
         "TRIAL":"TRIAL START FIRST 30 DAYS",
         "SUSCRIBE_EMAIL":"Enter your email to create or restart your membership",
@@ -35,7 +43,7 @@
         "TITLE_1":"Tv",
         "TITLE_2":"Shows",
         "HOME":"Home",
-        "MOVIE":"TV SHOW",
+        "SHOWS":"TV SHOW",
         "LIST":{
             "TITLE_1":"ONLINE STREAMING",
             "TITLE_2":"New Release Tv Show"
@@ -45,17 +53,17 @@
         "TITLE_1":"Our",
         "TITLE_2":"Musics",
         "HOME":"Home",
-        "MOVIE":"movie",
+        "MUSICS":"Musics",
         "LIST":{
             "TITLE_1":"ONLINE STREAMING",
-            "TITLE_2":"New Release Movies"
+            "TITLE_2":"New Release Musics"
         }
     },
     "PRICING":{
         "TITLE_1":"Our",
-        "TITLE_2":"Movies",
+        "TITLE_2":"Plan",
         "HOME":"Home",
-        "MOVIE":"movie",
+        "PLAN":"plan",
         "LIST":{
             "TITLE_1":"ONLINE STREAMING",
             "TITLE_2":"New Release Movies"
