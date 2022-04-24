@@ -33,3 +33,7 @@ $kilima-tv-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($kilima-tv-theme);
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
