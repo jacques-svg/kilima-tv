@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "kilima-tv"
-  }
+    "default": "kilima-tv",
+    "dev": "kilimatv-client"
+  },
+  "targets": {}
 }

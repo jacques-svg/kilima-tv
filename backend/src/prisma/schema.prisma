@@ -1,17 +1,136 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
+model User {
+  id           Int    @id @default(autoincrement())
+  email        String @unique
+  fullname     String
+  photoURL     String
+  phoneNumber  String
+  countryId    Int
+  country      Country @relation(fields: [countryId], references: [id])
+  subscriptionPlans UserSubscription[]
 }
 
-model User {
-  id       Int    @id @default(autoincrement())
-  email    String @unique
-  password String
+model Country {
+  id           Int    @id @default(autoincrement())
+  name         String @unique
+  currency     String
+  users        User[]
+  subscriptions SubscriptionPlanByCountry[]
+}
+
+model SubscriptionPlan {
+  id           Int    @id @default(autoincrement())
+  title        String
+  expires_in_months Int
+  countries    SubscriptionPlanByCountry[]
+  descriptions SubscriptionPlanWithDescription[]
+  users UserSubscription[]
+}
+
+model SubscriptionPlanByCountry {
+  country       Country    @relation(fields: [countryId], references: [id])
+  countryId     Int 
+  subscriptionPlan SubscriptionPlan @relation(fields: [subscriptionPlanId], references: [id])
+  subscriptionPlanId  Int  
+  createdAt DateTime @default(now())
+  price     Float
+
+  @@id([countryId, subscriptionPlanId])
+}
+
+
+model SubscriptionPlanDescription {
+  id           Int    @id @default(autoincrement())
+  title        String @unique
+  subscriptions SubscriptionPlanWithDescription[]
+}
+
+model SubscriptionPlanWithDescription {
+  subscriptionPlan SubscriptionPlan @relation(fields: [subscriptionPlanId], references: [id])
+  subscriptionPlanId  Int  
+  subsciptionDescription SubscriptionPlanDescription @relation(fields: [subscriptionDescriptionId], references: [id])
+  subscriptionDescriptionId Int
+
+  description String  
+
+  @@id([subscriptionPlanId, subscriptionDescriptionId])
+}
+
+model UserSubscription {
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  subscriptionPlan  SubscriptionPlan  @relation(fields: [subscriptionPlanId], references: [id])
+  subscriptionPlanId  Int
+
+  @@id([userId, subscriptionPlanId])
+}
+
+model PaymentMethod {
+  id           Int    @id @default(autoincrement())
+}
+
+model PaymentTransactions {
+  id           Int    @id @default(autoincrement())
+}
+
+model Purchase {
+  id           Int    @id @default(autoincrement())
+  
+}
+
+model Language {
+  id    Int               @id @default(autoincrement())
+  name  String
+  movie MovieOnLanguage[]
+}
+
+model MediaCategory {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model MediaActorOrSinger {
+  id            Int      @id @default(autoincrement())
+  firstname     String
+  lastname      String
+  height_in_cm  Int
+  date_of_birth DateTime
+}
+
+model Movie {
+  id            Int               @id @default(autoincrement())
+  duration      Int
+  release_date  DateTime
+  age_min       Int
+  is_free       Boolean   @default(false)
+
+  language MovieOnLanguage[]
+}
+
+model MovieOnLanguage {
+  languageId    Int
+  movieId       Int
+  addedAt       DateTime @default(now())
+  title         String
+  description   String
+  cloudflare_id String
+  home_preview_image_url String
+  home_preview_image_thumbnail_url  String
+  shown_small_image_url String
+  shown_small_image_thumbnail_url String
+  detail_large_image_url String
+  detail_large_image_thumbnail_url String
+  language      Language @relation(fields: [languageId], references: [id])
+  movie         Movie    @relation(fields: [movieId], references: [id])
+  
+  @@id([languageId, movieId])
+  @@index([movieId], map: "MovieOnLanguage_movieId_fkey")
 }

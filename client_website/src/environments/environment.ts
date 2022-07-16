@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  firebase: {
+    projectId: 'kilimatv-client',
+    appId: '1:60430824099:web:929df19c6713352a9c0516',
+    storageBucket: 'kilimatv-client.appspot.com',
+    apiKey: 'AIzaSyBZmPv1wocLHbyIFqC84HvAj_MuflwB7TU',
+    authDomain: 'kilimatv-client.firebaseapp.com',
+    messagingSenderId: '60430824099',
+    measurementId: 'G-XLECHSXT5W',
+  },
+  production: false,
+  endpointUrl: "http://localhost:3000"
 };
 
 /*

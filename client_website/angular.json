@@ -31,17 +31,41 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "src/assets/css/bootstrap-reboot.min.css",
+              "src/assets/css/bootstrap-grid.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/slider-radio.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/plyr.css",
+              "src/assets/css/main.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/slider-radio.js",
+              "src/assets/js/select2.min.js",
+              "src/assets/js/smooth-scrollbar.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/plyr.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -99,9 +123,20 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "client_website:build:production",
+            "firebaseProject": "kilimatv-client",
+            "firebaseHostingSite": "kilimatv-client"
           }
         }
       }

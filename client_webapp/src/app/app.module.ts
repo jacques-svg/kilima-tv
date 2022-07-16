@@ -24,6 +24,9 @@ import { TvShowDetailsComponent } from './tv-shows/tv-show-details/tv-show-detai
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { KilimaTranslationDirective } from './helper/translation/kilima-translation.directive';
 import { KilimaTranslationPipe } from './helper/translation/kilima-translation.pipe';
+import { MoviesService } from './services/movies.service';
+import { PlayerComponent } from './player/player.component';
+import { CloudflareStreamModule } from '@cloudflare/stream-angular';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { KilimaTranslationPipe } from './helper/translation/kilima-translation.p
     MainComponent,
     MovieDetailsComponent,
     TvShowDetailsComponent,
+    PlayerComponent,
     KilimaTranslationDirective,
     KilimaTranslationPipe
   ],
@@ -50,6 +54,7 @@ import { KilimaTranslationPipe } from './helper/translation/kilima-translation.p
     MatSelectModule,
     // ngx-translate and the loader module
     HttpClientModule,
+    CloudflareStreamModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,
@@ -59,7 +64,9 @@ import { KilimaTranslationPipe } from './helper/translation/kilima-translation.p
     }),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    MoviesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

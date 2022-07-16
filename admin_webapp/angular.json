@@ -31,10 +31,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/materialize-css/dist/css/materialize.scss",
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/apexcharts/dist/apexcharts.min.js"
+              "./node_modules/apexcharts/dist/apexcharts.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./materialize-src/js/bin/materialize.min.js"
             ]
           },
           "configurations": {

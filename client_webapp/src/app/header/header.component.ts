@@ -8,7 +8,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
   public userLang = navigator.language; 
+  public login_dropdown = false;
+
   public language:string = this.translate.currentLang || this.userLang.substr(0,2);
+  
   constructor(
     public translate: TranslateService
 ) {}
@@ -20,4 +23,6 @@ export class HeaderComponent implements OnInit {
   onChange(e:any) {
     this.translate.use(e.target.value)
   }
+
+
 }

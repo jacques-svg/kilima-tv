@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "kilimatv-client"
+  },
+  "targets": {
+    "kilimatv-client": {
+      "hosting": {
+        "client_website": [
+          "kilimatv-client"
+        ]
+      }
+    }
+  }
+}

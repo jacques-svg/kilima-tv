@@ -1,0 +1,16 @@
+.tooltip {
+    @apply invisible absolute;
+  }
+  
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
+  }
+
+  .section--full-bg {
+    background: url('/assets/img/tv_living_room-min.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+ 

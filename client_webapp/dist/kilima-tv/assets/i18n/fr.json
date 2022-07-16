@@ -1,0 +1,75 @@
+{
+    "HEADER":{
+        "HOME":"Accueil",
+        "SIGNIN":"Se connecter",
+        "MOVIES":"Films",
+        "TV_SHOW":"Series",
+        "MUSICS":"Musiques",
+        "SUBSCRIPTIONS":"Abonnements"
+    },
+    "CATEGORIES":{
+        "ANIMATION":"Animation",
+        "ROMANTIC":"Romantique",
+        "ACTIONS":"Actions"
+    },
+    "FOOTER":{
+        "TRIAL":"PERIODE D'ESSAIE DE 30 JOURS",
+        "SUSCRIBE_EMAIL":"Entrez votre email pour créer ou relancer votre abonnement",
+        "EMAIL":"Entrer votre email",
+        "STARTED":"Commencer",
+        "MENU":{
+            "HELP":"CENTRE D'AIDE",
+            "TERMS":"CONDITIONS D'UTILISATION",
+            "PRIVACY":"INTIMITÉ",
+            "CONTACTS":"CONTACTS"
+        },
+        "COPYRIGHT":"2022. Tous droits réservés par"
+    },
+    "MOVIES":{
+        "TITLE_1":"Nos",
+        "TITLE_2":"Films",
+        "HOME":"Accueil",
+        "MOVIE":"films",
+        "LIST":{
+            "TITLE_1":"DIFFUSION EN LIGNE",
+            "TITLE_2":"Nouveaux films"
+        }
+    },
+    "SHOWS":{
+        "TITLE_1":"",
+        "TITLE_2":"Series",
+        "HOME":"Accueil",
+        "SHOWS":"Series",
+        "LIST":{
+            "TITLE_1":"DIFFUSION EN LIGNE",
+            "TITLE_2":"Nouvelles series"
+        }
+    },
+    "MUSICS":{
+        "TITLE_1":"Nos",
+        "TITLE_2":"Musiques",
+        "HOME":"Accueil",
+        "MUSICS":"musiques",
+        "LIST":{
+            "TITLE_1":"DIFFUSION EN LIGNE",
+            "TITLE_2":"Nouvelles musiques"
+        }
+    },
+    "PRICING":{
+        "TITLE_1":"Nos",
+        "TITLE_2":"Forfaits",
+        "HOME":"Accueil",
+        "PLAN":"abonnements",
+        "PLANS":{
+            "REGULAR":{
+
+            },
+            "STANTARD":{
+
+            },
+            "PREMIUM":{
+
+            }
+        }
+    }
+}

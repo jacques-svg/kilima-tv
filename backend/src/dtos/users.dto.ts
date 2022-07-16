@@ -5,5 +5,11 @@ export class CreateUserDto {
   public email: string;
 
   @IsString()
-  public password: string;
+  public photoURL: string;
+
+  @IsString()
+  public phoneNumber: string;
+
+  @IsString()
+  public fullname: string;
 }

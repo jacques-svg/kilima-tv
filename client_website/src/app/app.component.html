@@ -1,1 +1,3 @@
+<app-header-ui *ngIf="appService.should_show_header"></app-header-ui>
 <router-outlet></router-outlet>
+<app-footer-ui *ngIf="appService.should_show_footer"></app-footer-ui>
